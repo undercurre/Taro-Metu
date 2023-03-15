@@ -8,5 +8,6 @@ export {}
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     Counter: typeof import('./components/Counter.vue')['default']
+    MissionItem: typeof import('./components/MissionItem.vue')['default']
   }
 }

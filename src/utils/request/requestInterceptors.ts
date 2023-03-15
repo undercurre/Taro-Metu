@@ -1,3 +1,4 @@
+import Taro from '@tarojs/taro';
 import { axios, AxiosRequestConfig } from 'taro-axios';
 import handleError from './handleError';
 
@@ -13,9 +14,14 @@ const handleAuth = (config: AxiosRequestConfig) => {
         config.headers = {};
     }
     const token = '123';
-    config.headers['Authorization'] = `Bearer ${
-        localStorage.getItem('token') || token || ''
-    }`;
+    try {
+      var value = Taro.getStorageSync('token')
+      if (value) {
+        config.headers['Authorization'] = `Bearer ${value}`
+      }
+    } catch (e) {
+      config.headers['Authorization'] = `Bearer ${token}`
+    }
     return config;
 };
 
