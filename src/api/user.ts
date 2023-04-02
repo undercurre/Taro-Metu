@@ -1,5 +1,6 @@
 import env_config from './base';
 import { post, get } from '../utils/request';
+import Taro from '@tarojs/taro';
 
 const moduleUrl = env_config.base_url + 'backend/user/';
 
@@ -41,6 +42,25 @@ export async function Login(username: string, password: string) {
     var loginRes = Object.assign({}, mark, res[1]);
 
     return loginRes;
+}
+
+export async function wechatLogin() {
+  const loginCode = await Taro.login();
+
+  const res = await get<{ token: string; info: { [key: string]: any } }>(
+    env_config.base_url + 'backend/' + 'wechatLogin',
+      {
+          code: loginCode.code,
+      },
+  );
+
+  const mark = {
+      isSuccess: res[1] && res[1].code === 0,
+  };
+
+  var loginRes = Object.assign({}, mark, res[1]);
+
+  return loginRes;
 }
 
 export async function GetInfo(id: number) {

@@ -1,8 +1,8 @@
-const env = 'development'
+const env = 'dev'
 
 const url = {
-  'development': 'http://localhost:7000/',
-  'production': '/api/'
+  'dev': 'http://localhost:7000/',
+  'prod': 'http://81.71.85.68:8086/api/'
 }
 
 export default {

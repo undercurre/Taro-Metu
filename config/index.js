@@ -92,6 +92,9 @@ const config = {
                         },
                     },
                 },
+                performance: {
+                  maxAssetSize: 30000000
+                }
             });
         },
         postcss: {

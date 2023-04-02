@@ -3,5 +3,6 @@
     "projectname": "MatrixCross-Taro-Admin",
     "setting": {
         "compileHotReLoad": false
-    }
+    },
+    "libVersion": "2.30.0"
 }
