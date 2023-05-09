@@ -46,6 +46,7 @@
         "@tarojs/components": "3.5.12",
         "@tarojs/helper": "3.5.12",
         "@tarojs/plugin-framework-vue3": "3.5.12",
+        "@tarojs/plugin-http": "^3.6.6",
         "@tarojs/plugin-platform-alipay": "3.5.12",
         "@tarojs/plugin-platform-jd": "3.5.12",
         "@tarojs/plugin-platform-qq": "3.5.12",
@@ -57,8 +58,8 @@
         "@tarojs/shared": "3.5.12",
         "@tarojs/taro": "3.5.12",
         "@tarojs/taro-h5": "3.5.12",
+        "axios": "^1.4.0",
         "pinia": "^2.0.10",
-        "taro-axios": "^1.1.1",
         "vue": "^3.2.24"
     },
     "devDependencies": {

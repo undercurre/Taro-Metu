@@ -44,7 +44,7 @@
         "ignoreUploadUnusedFiles": false
     },
     "compileType": "miniprogram",
-    "libVersion": "2.30.0",
+    "libVersion": "2.31.1",
     "srcMiniprogramRoot": "dist/",
     "packOptions": {
         "ignore": [],

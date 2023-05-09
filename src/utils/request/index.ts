@@ -1,4 +1,4 @@
-import { axios } from 'taro-axios';
+import axios from 'axios';
 import './requestInterceptors';
 import './responseInterceptors';
 

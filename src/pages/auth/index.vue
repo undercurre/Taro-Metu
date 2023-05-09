@@ -10,12 +10,15 @@
 <script lang="ts" setup>
 import Taro from '@tarojs/taro'
 import { useLoad } from '@tarojs/taro';
+import { login2Server } from '../../api/user';
 
 useLoad(async () => {
 })
 
 async function check() {
-  const res = await Taro.login()
-  console.log(res)
+  const wechatLoginRes = await Taro.login()
+  console.log(wechatLoginRes)
+  // const serverLoginRes = await login2Server(wechatLoginRes.code)
+  // console.log(serverLoginRes)
 }
 </script>
